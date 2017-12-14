@@ -1,4 +1,4 @@
-Thread-safe cache for in-memoyr key-value store.
+Thread-safe cache for in-memory key-value store.
 
 'src' contains examples of using the library
 
