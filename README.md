@@ -15,16 +15,17 @@ This is meant to be a simplified version of [memcached](https://www.memcached.or
 ```C
 // Declaring a HTCache object in code
 HTCache<int64_t, bool> cache(addrelen, pagesize, policy, handler)
-
+```
+The above maps int64_t to bool value. The following describes the variables:
+* addrlen = address space in terms of number of bits
+* pagesize = size of each page in terms of number of entries
+* eviction = eviction policy (FIFO, Random, LRU, Clock) 
+* handler = function to call when requested item is missing from cache
+```C
 // Storing key-value
 cache.put(key, value);
 
 // Retrieve value from key
 cache.get(key);
 ```
-addrlen = address space in terms of number of bits
-pagesize = size of each page in terms of number of entries
-eviction = eviction policy (FIFO, Random, LRU, Clock) 
-handler = function to call when requested item is missing from cache
 
-maps int64_t to bool value
